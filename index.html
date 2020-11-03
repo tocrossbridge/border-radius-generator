@@ -44,7 +44,7 @@
                     <div class="form-group">
                         Copyboard:
                         <input type="text" class="form-control" id="copyboard" />
-                        <button class="btn btn-primary w-100">Copy!</button>
+                        <button class="btn btn-primary w-100" onclick="copyCode()">Copy!</button>
                     </div>
                 </div>
             </div>
@@ -74,8 +74,18 @@
             var input_br = document.getElementById('input_br').value;
             var input_bl = document.getElementById('input_bl').value;
             // copyboard:
-            var copyboard = document.getElementById('copyboard');
+            var copyboard_text = document.getElementById('copyboard');
 
+            // copyboard function:
+            function copyCode(){
+                // select the text field:
+                copyboard_text.select();
+                copyboard_text.setSelectionRange(0, 99999); // for mobile devices
+                // copy the content of input:
+                document.execCommand("copy");
+                // alert what was copied:
+                alert("Text copied was "+copyboard_text.value)
+            }
         </script>
     </body>
 </html>
