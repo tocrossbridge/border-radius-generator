@@ -5,11 +5,10 @@
         <!-- STYLE -->
         <link rel="stylesheet" href="css/index.css">
         <link rel="stylesheet" href="css/bootstrap.min.css">
-        <script src="js/bootstrap.min.js"></script>
     </head>
     <body>
         <!-- TITLE SECTION -->
-        <div class="row d-flex justify-content-center">
+        <div class="row d-flex justify-content-center mt-5 mb-5">
             <div class="col text-center">
                 <h1>The coolest<br/>border-radius generator<br/>ever!</h1>
                 <span>For the laziest people as me, haha!</span>
@@ -22,7 +21,7 @@
                     <textarea id="code"></textarea>
                 </div>
             </div>
-            <div class="col-12 d-flex justify-content-center">
+            <div class="col-12 d-flex justify-content-center mt-5 mb-5">
                 <div>
                     <!-- INPUTS OF THE FOUR BORDERS -->
                     <div class="form-group">
@@ -38,7 +37,7 @@
                         <input type="text" class="form-control" id="input_br" />
                     </div>
                     <div class="form-group">
-                        Bottom
+                        Bottom left
                         <input type="text" class="form-control" id="input_bl" />
                     </div>
                     <!-- COPYBOARD -->
@@ -63,16 +62,17 @@
         <!-- SCRIPTS -->
         <script src="js/jquery-3.3.1.slim.min.js"></script>
         <script src="js/popper.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
         <script>
             // The box:
             var box = document.getElementById('box');
             // the code in the textarea:
             var code = document.getElementById('code');
             // the inputs that render the border:
-            var input_tr = document.getElementById('input_tr');
-            var input_tl = document.getElementById('input_tl');
-            var input_br = document.getElementById('input_br');
-            var input_bl = document.getElementById('input_bl');
+            var input_tr = document.getElementById('input_tr').value;
+            var input_tl = document.getElementById('input_tl').value;
+            var input_br = document.getElementById('input_br').value;
+            var input_bl = document.getElementById('input_bl').value;
             // copyboard:
             var copyboard = document.getElementById('copyboard');
 
