@@ -26,19 +26,19 @@
                     <!-- INPUTS OF THE FOUR BORDERS -->
                     <div class="form-group">
                         Top right:
-                        <input type="text" class="form-control" id="input_tr" />
+                        <input type="text" class="form-control" id="input_tr" onchange="changeTopRight()" />
                     </div>
                     <div class="form-group">
                         Top left:
-                        <input type="text" class="form-control" id="input_tl" />
+                        <input type="text" class="form-control" id="input_tl" onchange="changeTopLeft()"/>
                     </div>
                     <div class="form-group">
                         Bottom right:
-                        <input type="text" class="form-control" id="input_br" />
+                        <input type="text" class="form-control" id="input_br" onchange="changeBottomRight()"/>
                     </div>
                     <div class="form-group">
                         Bottom left
-                        <input type="text" class="form-control" id="input_bl" />
+                        <input type="text" class="form-control" id="input_bl" onchange="changeBottomLeft()"/>
                     </div>
                     <!-- COPYBOARD -->
                     <div class="form-group">
@@ -68,13 +68,14 @@
             var box = document.getElementById('box');
             // the code in the textarea:
             var code = document.getElementById('code');
-            // the inputs that render the border:
-            var input_tr = document.getElementById('input_tr').value;
-            var input_tl = document.getElementById('input_tl').value;
-            var input_br = document.getElementById('input_br').value;
-            var input_bl = document.getElementById('input_bl').value;
             // copyboard:
             var copyboard_text = document.getElementById('copyboard');
+
+            // function to change the borders:
+            function changeTopRight(){ box.style.borderTopRightRadius = document.getElementById('input_tr').value+"px"; }
+            function changeTopLeft(){ box.style.borderTopLeftRadius = document.getElementById('input_tl').value+"px"; }
+            function changeBottomRight(){ box.style.borderBottomRightRadius = document.getElementById('input_br').value+"px"; }
+            function changeBottomLeft(){ box.style.borderBottomLeftRadius = document.getElementById('input_bl').value+"px"; }
 
             // copyboard function:
             function copyCode(){
