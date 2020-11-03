@@ -17,8 +17,37 @@
         </div>
         <!-- BORDER-RADIUS GENERATOR SECTION -->
         <div class="row">
-            <div class="col-12 d-flex justify-content-center mt-5">
-                <div class="box"></div>
+            <div class="col-12 d-flex justify-content-center mt-5 mb-5">
+                <div id="box" class="box">
+                    <textarea id="code"></textarea>
+                </div>
+            </div>
+            <div class="col-12 d-flex justify-content-center">
+                <div>
+                    <!-- INPUTS OF THE FOUR BORDERS -->
+                    <div class="form-group">
+                        Top right:
+                        <input type="text" class="form-control" id="input_tr" />
+                    </div>
+                    <div class="form-group">
+                        Top left:
+                        <input type="text" class="form-control" id="input_tl" />
+                    </div>
+                    <div class="form-group">
+                        Bottom right:
+                        <input type="text" class="form-control" id="input_br" />
+                    </div>
+                    <div class="form-group">
+                        Bottom
+                        <input type="text" class="form-control" id="input_bl" />
+                    </div>
+                    <!-- COPYBOARD -->
+                    <div class="form-group">
+                        Copyboard:
+                        <input type="text" class="form-control" id="copyboard" />
+                        <button class="btn btn-primary w-100">Copy!</button>
+                    </div>
+                </div>
             </div>
         </div>
         <!-- CONTACT SECTION -->
@@ -34,5 +63,19 @@
         <!-- SCRIPTS -->
         <script src="js/jquery-3.3.1.slim.min.js"></script>
         <script src="js/popper.min.js"></script>
+        <script>
+            // The box:
+            var box = document.getElementById('box');
+            // the code in the textarea:
+            var code = document.getElementById('code');
+            // the inputs that render the border:
+            var input_tr = document.getElementById('input_tr');
+            var input_tl = document.getElementById('input_tl');
+            var input_br = document.getElementById('input_br');
+            var input_bl = document.getElementById('input_bl');
+            // copyboard:
+            var copyboard = document.getElementById('copyboard');
+
+        </script>
     </body>
 </html>
