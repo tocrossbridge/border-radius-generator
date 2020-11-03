@@ -72,10 +72,10 @@
             var copyboard_text = document.getElementById('copyboard');
 
             // function to change the borders:
-            function changeTopRight(){ box.style.borderTopRightRadius = document.getElementById('input_tr').value+"px"; }
-            function changeTopLeft(){ box.style.borderTopLeftRadius = document.getElementById('input_tl').value+"px"; }
-            function changeBottomRight(){ box.style.borderBottomRightRadius = document.getElementById('input_br').value+"px"; }
-            function changeBottomLeft(){ box.style.borderBottomLeftRadius = document.getElementById('input_bl').value+"px"; }
+            function changeTopRight(){ box.style.borderTopRightRadius = document.getElementById('input_tr').value+"px"; showTheCode() }
+            function changeTopLeft(){ box.style.borderTopLeftRadius = document.getElementById('input_tl').value+"px"; showTheCode() }
+            function changeBottomRight(){ box.style.borderBottomRightRadius = document.getElementById('input_br').value+"px"; showTheCode() }
+            function changeBottomLeft(){ box.style.borderBottomLeftRadius = document.getElementById('input_bl').value+"px"; showTheCode() }
 
             // generate the code:
             function generateCode(){
@@ -85,10 +85,15 @@
                 var bottomLeft = box.style.borderBottomLeftRadius;
 
                 var everybody_together =
-                    "border-top-right-radius:"+topRight+"border-top-left-radius:"+topLeft
-                    "border-bottom-right-radius:"+bottomRight+"border-bottom-left-radius:"+bottomLeft;
+                    "border-top-right-radius:"+topRight+";"+"border-top-left-radius:"+topLeft+";"+
+                    "border-bottom-right-radius:"+bottomRight+";"+"border-bottom-left-radius:"+bottomLeft+";";
 
                 return everybody_together;
+            }
+
+            // show the code
+            function showTheCode(){
+                code.value = generateCode()
             }
 
             // copyboard function:
