@@ -85,8 +85,10 @@
                 var bottomLeft = box.style.borderBottomLeftRadius;
 
                 var everybody_together =
-                    "border-top-right-radius:"+topRight+";"+"border-top-left-radius:"+topLeft+";"+
-                    "border-bottom-right-radius:"+bottomRight+";"+"border-bottom-left-radius:"+bottomLeft+";";
+                    "border-top-right-radius:"+topRight+";"+"\n"+"border-top-left-radius:"+topLeft+";"+"\n"+
+                    "border-bottom-right-radius:"+bottomRight+";"+"\n"+"border-bottom-left-radius:"+bottomLeft+";";
+
+                copyboard.value = everybody_together
 
                 return everybody_together;
             }
