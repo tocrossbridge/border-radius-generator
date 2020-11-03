@@ -72,10 +72,30 @@
             var copyboard_text = document.getElementById('copyboard');
 
             // function to change the borders:
-            function changeTopRight(){ box.style.borderTopRightRadius = document.getElementById('input_tr').value+"px"; showTheCode() }
-            function changeTopLeft(){ box.style.borderTopLeftRadius = document.getElementById('input_tl').value+"px"; showTheCode() }
-            function changeBottomRight(){ box.style.borderBottomRightRadius = document.getElementById('input_br').value+"px"; showTheCode() }
-            function changeBottomLeft(){ box.style.borderBottomLeftRadius = document.getElementById('input_bl').value+"px"; showTheCode() }
+            function changeTopRight(){
+                if(document.getElementById("input_tr").value){
+                    box.style.borderTopRightRadius = document.getElementById('input_tr').value+"px";
+                }else{ box.style.borderTopRightRadius = "0" }
+                showTheCode()
+            }
+            function changeTopLeft(){
+                if(document.getElementById("input_tl").value){
+                    box.style.borderTopLeftRadius = document.getElementById('input_tl').value+"px";
+                }else{ box.style.borderTopLeftRadius = "0" }
+                showTheCode()
+            }
+            function changeBottomRight(){
+                if(document.getElementById("input_br").value){
+                    box.style.borderBottomRightRadius = document.getElementById('input_br').value+"px";
+                }else{ box.style.borderBottomRightRadius = "0"}
+                showTheCode()
+            }
+            function changeBottomLeft(){
+                if(document.getElementById("input_bl").value){
+                    box.style.borderBottomLeftRadius = document.getElementById('input_bl').value+"px";
+                }else{ box.style.borderBottomLeftRadius = "0"}
+                showTheCode()
+            }
 
             // generate the code:
             function generateCode(){
@@ -84,9 +104,15 @@
                 var bottomRight = box.style.borderBottomRightRadius;
                 var bottomLeft = box.style.borderBottomLeftRadius;
 
-                var everybody_together =
-                    "border-top-right-radius:"+topRight+";"+"\n"+"border-top-left-radius:"+topLeft+";"+"\n"+
-                    "border-bottom-right-radius:"+bottomRight+";"+"\n"+"border-bottom-left-radius:"+bottomLeft+";";
+                let everybody_together = []
+
+                if(topRight){ everybody_together[0] = "border-top-right-radius:"+topRight+";"+"\n" }
+                if(topLeft){ everybody_together[1] = "border-top-left-radius:"+topLeft+";"+"\n" }
+                if(bottomRight){ everybody_together[2] = "border-bottom-right-radius:"+bottomRight+";"+"\n" }
+                if(bottomLeft){ everybody_together[3] = "border-bottom-left-radius:"+bottomLeft+";"+"\n" }
+
+                everybody_together = everybody_together.toString()
+                everybody_together = everybody_together.replace(",", "")
 
                 copyboard.value = everybody_together
 
