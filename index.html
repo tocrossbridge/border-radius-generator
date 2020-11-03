@@ -77,6 +77,20 @@
             function changeBottomRight(){ box.style.borderBottomRightRadius = document.getElementById('input_br').value+"px"; }
             function changeBottomLeft(){ box.style.borderBottomLeftRadius = document.getElementById('input_bl').value+"px"; }
 
+            // generate the code:
+            function generateCode(){
+                var topRight = box.style.borderTopRightRadius;
+                var topLeft = box.style.borderTopLeftRadius;
+                var bottomRight = box.style.borderBottomRightRadius;
+                var bottomLeft = box.style.borderBottomLeftRadius;
+
+                var everybody_together =
+                    "border-top-right-radius:"+topRight+"border-top-left-radius:"+topLeft
+                    "border-bottom-right-radius:"+bottomRight+"border-bottom-left-radius:"+bottomLeft;
+
+                return everybody_together;
+            }
+
             // copyboard function:
             function copyCode(){
                 // select the text field:
