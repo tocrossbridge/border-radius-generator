@@ -15,13 +15,13 @@
             </div>
         </div>
         <!-- BORDER-RADIUS GENERATOR SECTION -->
-        <div class="row">
-            <div class="col-12 d-flex justify-content-center mt-5 mb-5">
+        <div class="row d-flex justify-content-center">
+            <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 d-flex justify-content-center mt-5 mb-5">
                 <div id="box" class="box d-flex justify-content-center">
                     <textarea id="code" class="my-auto"></textarea>
                 </div>
             </div>
-            <div class="col-12 d-flex justify-content-center mt-5 mb-5">
+            <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 d-flex justify-content-center mt-5 mb-5">
                 <div>
                     <!-- INPUTS OF THE FOUR BORDERS -->
                     <div class="form-group">
@@ -106,10 +106,10 @@
 
                 let everybody_together = []
 
-                if(topRight){ everybody_together[0] = "border-top-right-radius:"+topRight+";"+"\n" }
-                if(topLeft){ everybody_together[1] = "border-top-left-radius:"+topLeft+";"+"\n" }
-                if(bottomRight){ everybody_together[2] = "border-bottom-right-radius:"+bottomRight+";"+"\n" }
-                if(bottomLeft){ everybody_together[3] = "border-bottom-left-radius:"+bottomLeft+";"+"\n" }
+                if(topRight){ everybody_together[0] = "border-top-right-radius: "+topRight+";"+"\n" }
+                if(topLeft){ everybody_together[1] = "border-top-left-radius: "+topLeft+";"+"\n" }
+                if(bottomRight){ everybody_together[2] = "border-bottom-right-radius: "+bottomRight+";"+"\n" }
+                if(bottomLeft){ everybody_together[3] = "border-bottom-left-radius: "+bottomLeft+";"+"\n" }
 
                 everybody_together = everybody_together.toString()
                 everybody_together = everybody_together.replace(",", "")
@@ -132,7 +132,7 @@
                 // copy the content of input:
                 document.execCommand("copy");
                 // alert what was copied:
-                alert("Text copied was "+copyboard_text.value)
+                alert("The code copied was:\n\n"+copyboard_text.value)
             }
         </script>
     </body>
