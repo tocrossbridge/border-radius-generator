@@ -7,133 +7,21 @@
         <link rel="stylesheet" href="css/bootstrap.min.css">
     </head>
     <body>
-        <!-- TITLE SECTION -->
-        <div class="row d-flex justify-content-center mt-5 mb-5">
-            <div class="col text-center">
-                <h1>The coolest<br/>border-radius generator<br/>ever!</h1>
-                <span>For the laziest people as me, haha!</span>
-            </div>
-        </div>
-        <!-- BORDER-RADIUS GENERATOR SECTION -->
-        <div class="row d-flex justify-content-center">
-            <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 d-flex justify-content-center mt-5 mb-5">
-                <div id="box" class="box d-flex justify-content-center">
-                    <textarea id="code" class="my-auto"></textarea>
+        <div class="bg-img"></div>
+            <div class="content-area">
+            <!-- TITLE SECTION -->
+            <div class="row d-flex justify-content-center mt-5 mb-5">
+                <div class="col text-center">
+                    <h1>The coolest<br/>border-radius generator<br/>ever!</h1>
+                    <span>For the laziest people as me, haha!</span>
+                    <br/>
+                    <a href="./app.html"><button class="btn btn-primary mt-2">Let's create!</button></a>
                 </div>
-            </div>
-            <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 d-flex justify-content-center mt-5 mb-5">
-                <div>
-                    <!-- INPUTS OF THE FOUR BORDERS -->
-                    <div class="form-group">
-                        Top right:
-                        <input type="text" class="form-control" id="input_tr" onchange="changeTopRight()" />
-                    </div>
-                    <div class="form-group">
-                        Top left:
-                        <input type="text" class="form-control" id="input_tl" onchange="changeTopLeft()"/>
-                    </div>
-                    <div class="form-group">
-                        Bottom right:
-                        <input type="text" class="form-control" id="input_br" onchange="changeBottomRight()"/>
-                    </div>
-                    <div class="form-group">
-                        Bottom left
-                        <input type="text" class="form-control" id="input_bl" onchange="changeBottomLeft()"/>
-                    </div>
-                    <!-- COPYBOARD -->
-                    <div class="form-group">
-                        Copyboard:
-                        <input type="text" class="form-control" id="copyboard" />
-                        <button class="btn btn-primary w-100" onclick="copyCode()">Copy!</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- CONTACT SECTION -->
-        <div class="row">
-            <div class="col d-flex justify-content-center">
-                <ul class="list-inline">
-                    <li class="list-inline-item">Beatriz</li>
-                    <li class="list-inline-item"><a href="https://github.com/wolfhaltz" class="text-dark">Github</a></li>
-                    <li class="list-inline-item">2020</li>
-                </ul>
             </div>
         </div>
         <!-- SCRIPTS -->
         <script src="js/jquery-3.3.1.slim.min.js"></script>
         <script src="js/popper.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
-        <script>
-            // The box:
-            var box = document.getElementById('box');
-            // the code in the textarea:
-            var code = document.getElementById('code');
-            // copyboard:
-            var copyboard_text = document.getElementById('copyboard');
-
-            // function to change the borders:
-            function changeTopRight(){
-                if(document.getElementById("input_tr").value){
-                    box.style.borderTopRightRadius = document.getElementById('input_tr').value+"px";
-                }else{ box.style.borderTopRightRadius = "0" }
-                showTheCode()
-            }
-            function changeTopLeft(){
-                if(document.getElementById("input_tl").value){
-                    box.style.borderTopLeftRadius = document.getElementById('input_tl').value+"px";
-                }else{ box.style.borderTopLeftRadius = "0" }
-                showTheCode()
-            }
-            function changeBottomRight(){
-                if(document.getElementById("input_br").value){
-                    box.style.borderBottomRightRadius = document.getElementById('input_br').value+"px";
-                }else{ box.style.borderBottomRightRadius = "0"}
-                showTheCode()
-            }
-            function changeBottomLeft(){
-                if(document.getElementById("input_bl").value){
-                    box.style.borderBottomLeftRadius = document.getElementById('input_bl').value+"px";
-                }else{ box.style.borderBottomLeftRadius = "0"}
-                showTheCode()
-            }
-
-            // generate the code:
-            function generateCode(){
-                var topRight = box.style.borderTopRightRadius;
-                var topLeft = box.style.borderTopLeftRadius;
-                var bottomRight = box.style.borderBottomRightRadius;
-                var bottomLeft = box.style.borderBottomLeftRadius;
-
-                let everybody_together = []
-
-                if(topRight){ everybody_together[0] = "border-top-right-radius: "+topRight+";"+"\n" }
-                if(topLeft){ everybody_together[1] = "border-top-left-radius: "+topLeft+";"+"\n" }
-                if(bottomRight){ everybody_together[2] = "border-bottom-right-radius: "+bottomRight+";"+"\n" }
-                if(bottomLeft){ everybody_together[3] = "border-bottom-left-radius: "+bottomLeft+";"+"\n" }
-
-                everybody_together = everybody_together.toString()
-                everybody_together = everybody_together.replace(",", "")
-
-                copyboard.value = everybody_together
-
-                return everybody_together;
-            }
-
-            // show the code
-            function showTheCode(){
-                code.value = generateCode()
-            }
-
-            // copyboard function:
-            function copyCode(){
-                // select the text field:
-                copyboard_text.select();
-                copyboard_text.setSelectionRange(0, 99999); // for mobile devices
-                // copy the content of input:
-                document.execCommand("copy");
-                // alert what was copied:
-                alert("The code copied was:\n\n"+copyboard_text.value)
-            }
-        </script>
     </body>
 </html>
