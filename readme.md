@@ -6,3 +6,5 @@ It's a simple HTML file, that you can type the number of each corner of the div,
 
 ### Is there some improvement coming?
 Yes! I want to add a function that adds box-shadow on it :)
+
+<img src="img/project.png" />
