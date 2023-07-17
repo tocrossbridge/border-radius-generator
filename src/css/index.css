@@ -28,7 +28,7 @@ body {
 
     background-color: rgb(0, 0, 0);
     /* Fallback color */
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.);
     /* Black w/opacity/see-through */
     border: 3px solid #f1f1f1;
 
@@ -56,4 +56,25 @@ body {
     .box {
         width: 20rem;
     }
+}
+
+.title__box {
+    position: relative;
+    margin: 0 0 5% 0;
+}
+
+.friendly-msg__box {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.friendly-msg__text {
+    position: absolute;
+    top: 80%
+}
+
+.friendly-msg__img {
+    width: 150px;
+    border-radius: 50%;
 }
