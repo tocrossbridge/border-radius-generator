@@ -1,27 +1,76 @@
 <!DOCTYPE html>
 <html>
+
     <head>
         <title>The coolest border-radius generator ever</title>
         <!-- STYLE -->
-        <link rel="stylesheet" href="css/index.css">
-        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="src/css/index.css">
+        <link rel="stylesheet" href="src/css/bootstrap.min.css">
     </head>
+
     <body>
         <div class="bg-img"></div>
-            <div class="content-area">
+        <div class="content-area">
             <!-- TITLE SECTION -->
-            <div class="row d-flex justify-content-center mt-5 mb-5">
-                <div class="col text-center">
-                    <h1>The coolest<br/>border-radius generator<br/>ever!</h1>
-                    <span>For the laziest people as me, haha!</span>
-                    <br/>
-                    <a href="./app.html"><button class="btn btn-primary mt-2">Let's create!</button></a>
+            <div class="text-center mb-5">
+                <h1>The coolest border-radius generator ever!</h1>
+                <span>For the laziest people (as me, haha)!</span>
+            </div>
+
+            <!-- BORDER-RADIUS GENERATOR SECTION -->
+            <div class="row d-flex justify-content-center">
+                <div class="col-6 my-auto">
+                    <div id="box" class="box">
+                        <!-- COPYBOARD -->
+                        <div class="form-group">
+                            Copyboard:
+                            <input type="text" class="form-control" id="copyboard" style="height: 5rem;" />
+                            <button class="btn btn-primary w-100" onclick="copyCode()">Copy!</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4 my-auto">
+                    <div>
+                        <div class="form-group">
+                            Top right:
+                            <input type="text" class="form-control" id="input_tr" onchange="changeTopRight()" />
+                        </div>
+                        <div class="form-group">
+                            Top left:
+                            <input type="text" class="form-control" id="input_tl" onchange="changeTopLeft()" />
+                        </div>
+                        <div class="form-group">
+                            Bottom right:
+                            <input type="text" class="form-control" id="input_br" onchange="changeBottomRight()" />
+                        </div>
+                        <div class="form-group">
+                            Bottom left
+                            <input type="text" class="form-control" id="input_bl" onchange="changeBottomLeft()" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CONTACT SECTION -->
+            <div class="row mt-5">
+                <div class="col d-flex justify-content-center">
+                    <ul class="list-inline">
+                        <li class="list-inline-item">
+                            <a href="https://github.com/tocrossbridge" class="text-white">
+                                BTRZ
+                            </a>
+                        </li>
+                        <li class="list-inline-item">2023</li>
+                    </ul>
                 </div>
             </div>
         </div>
+
         <!-- SCRIPTS -->
-        <script src="js/jquery-3.3.1.slim.min.js"></script>
-        <script src="js/popper.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
+        <script src="src/js/jquery-3.3.1.slim.min.js"></script>
+        <script src="src/js/popper.min.js"></script>
+        <script src="src/js/bootstrap.min.js"></script>
+        <script src="src/js/border-generator.js"></script>
     </body>
+
 </html>
