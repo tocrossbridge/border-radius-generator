@@ -23,33 +23,32 @@
 
             <!-- BORDER-RADIUS GENERATOR SECTION -->
             <div class="row d-flex justify-content-center">
-                <div class="col-6 my-auto">
-                    <div id="box" class="box">
-                        <!-- COPYBOARD -->
-                        <div class="form-group">
-                            Copyboard:
-                            <input type="text" class="form-control" id="copyboard" style="height: 5rem;" />
-                            <button class="btn btn-primary w-100" onclick="copyCode()">Copy!</button>
+                <div class="col-12 mb-5">
+                    <div class="row justify-content-center">
+                        <div class="col-12 col-md-2">
+                            <label>Top right:</label>
+                            <input type="text" class="form-control" id="input_tr" onchange="changeTopRight()" />
+                        </div>
+                        <div class="col-12 col-md-2">
+                            <label>Top left:</label>
+                            <input type="text" class="form-control" id="input_tl" onchange="changeTopLeft()" />
+                        </div>
+                        <div class="col-12 col-md-2">
+                            <label>Bottom right:</label>
+                            <input type="text" class="form-control" id="input_br" onchange="changeBottomRight()" />
+                        </div>
+                        <div class="col-12 col-md-2">
+                            <label>Bottom left:</label>
+                            <input type="text" class="form-control" id="input_bl" onchange="changeBottomLeft()" />
                         </div>
                     </div>
                 </div>
-                <div class="col-4 my-auto">
-                    <div>
-                        <div class="form-group">
-                            Top right:
-                            <input type="text" class="form-control" id="input_tr" onchange="changeTopRight()" />
-                        </div>
-                        <div class="form-group">
-                            Top left:
-                            <input type="text" class="form-control" id="input_tl" onchange="changeTopLeft()" />
-                        </div>
-                        <div class="form-group">
-                            Bottom right:
-                            <input type="text" class="form-control" id="input_br" onchange="changeBottomRight()" />
-                        </div>
-                        <div class="form-group">
-                            Bottom left
-                            <input type="text" class="form-control" id="input_bl" onchange="changeBottomLeft()" />
+                <!-- COPYBOARD -->
+                <div class="col-12">
+                    <div class="box" id="box">
+                        <div class="box__content">
+                            <input type="text" class="form-control" id="copyboard" style="height: 5rem;" />
+                            <button class="btn btn-primary w-100" onclick="copyCode()">Copy!</button>
                         </div>
                     </div>
                 </div>

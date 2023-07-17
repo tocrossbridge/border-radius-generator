@@ -9,4 +9,4 @@ Hell no kkkkkk I just want to prove that I can do DOM manipulation kkkkkk
 
 ## Version
 
-<img src="src/img/first-version.svg" style="width: 600px;" />
+<img src="src/img/first-version.svg" />

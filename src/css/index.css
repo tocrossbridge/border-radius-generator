@@ -10,7 +10,7 @@ body {
 .bg-img {
     height: 100%;
 
-    background-image: url('../img/ocean.jpg');
+    background-image: url('../img/bg.jpg');
     background-size: cover;
     background-repeat: no-repeat;
 
@@ -19,7 +19,7 @@ body {
 }
 
 .content-area {
-    width: 80%;
+    width: 90%;
     position: absolute;
     z-index: 2;
     top: 50%;
@@ -28,7 +28,7 @@ body {
 
     background-color: rgb(0, 0, 0);
     /* Fallback color */
-    background-color: rgba(0, 0, 0, 0.);
+    background-color: rgba(0, 0, 0, 0.9);
     /* Black w/opacity/see-through */
     border: 3px solid #f1f1f1;
 
@@ -39,25 +39,9 @@ body {
     transform: translate(-50%, -50%);
 }
 
-.box {
-    height: 20rem;
-    width: 30rem;
-    display: flex;
-
-    border: 5px solid white;
-}
-
-.box > div {
-    width: 90%;
-    margin: auto;
-}
-
-@media only screen and (max-width: 1000px) {
-    .box {
-        width: 20rem;
-    }
-}
-
+/*
+    Title, msg & img
+*/
 .title__box {
     position: relative;
     margin: 0 0 5% 0;
@@ -77,4 +61,37 @@ body {
 .friendly-msg__img {
     width: 150px;
     border-radius: 50%;
+}
+
+/*
+    Box & Copyboard
+*/
+.box {
+    height: 20rem;
+    width: 30rem;
+    display: flex;
+    margin: auto;
+
+    border: 5px solid white;
+}
+
+.box__content {
+    width: 90%;
+    margin: auto;
+}
+
+.box__content > input {
+    border-bottom-left-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+}
+
+.box__content > button {
+    border-top-left-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+}
+
+@media only screen and (max-width: 1000px) {
+    .box {
+        width: 20rem;
+    }
 }
